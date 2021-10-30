@@ -93,15 +93,29 @@
 .submenu {
     display: none;
 }
+.dis{
+display: block;
+}
 .contenedor-tablaontmesh, .contenedor-tablaotros{
     margin-bottom: 30px !important;
     display: none;
 }
-.contenedor-tablaped ,.titulo-detalles, .cont-detalles, .contenedor-tablaped, .cont-equipos,.tabla-inv, .info-mesh, .tabla-mesh, .info-ont ,.tabla-ont{
+.contenedor-tablaped ,.titulo-detalles, .cont-detalles, .contenedor-tablaped, .cont-equipos,.tabla-inv, .info-mesh, .tabla-mesh, .info-ont, .info-titu ,.tabla-ont{
     background: #fff;
     border: 1px solid #d6d6d6;
     border-radius:5px
 }
 .despe .nav-link{
     cursor: pointer;
+}
+
+.form-ped{
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn-filtrarcon{
+    margin-top: 30px !important;
+    width: 100%;
 }
