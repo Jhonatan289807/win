@@ -312,7 +312,7 @@ switch($op){
                 $json[] = jsonOntMesh($ontmesh);
             }
             echo json_encode($json);
-        } catch (Exceptiion $e) {
+        } catch (Exception $e) {
             echo json_encode($e);
         }
         break;
