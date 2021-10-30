@@ -53,13 +53,19 @@ if(isset($_SESSION['user'])){
                                 Abonados
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="liquidados.php">
+                                <i class="fas fa-check-square"></i>
+                                Liquidados
+                            </a>
+                        </li>
                         <li class="nav-item despe">
                             <a class="nav-link">
                                 <i class="fas fa-box"></i>
                                 Equipos
                                 <i class="fas fa-angle-double-down"></i>
                             </a>
-                            <ul class="submenu nav">
+                            <ul class="submenu nav dis">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="equipos.php">
                                         <i class="fas fa-clipboard-list"></i>
@@ -223,6 +229,7 @@ if(isset($_SESSION['user'])){
     <script src="../js/nav.js"></script>
     <script src="../js/idioma.js"></script>
     <script src="../js/equipos.js"></script>
+    
 </body>
 
 </html>

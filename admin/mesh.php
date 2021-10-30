@@ -39,7 +39,7 @@ if(isset($_SESSION['user'])){
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse siderbar-admin">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse siderbar-admin">
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -54,13 +54,19 @@ if(isset($_SESSION['user'])){
                                 Abonados
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="liquidados.php">
+                                <i class="fas fa-check-square"></i>
+                                Liquidados
+                            </a>
+                        </li>
                         <li class="nav-item despe">
                             <a class="nav-link">
                                 <i class="fas fa-box"></i>
                                 Equipos
                                 <i class="fas fa-angle-double-down"></i>
                             </a>
-                            <ul class="submenu nav">
+                            <ul class="submenu nav dis">
                                 <li class="nav-item">
                                     <a class="nav-link" href="equipos.php">
                                         <i class="fas fa-clipboard-list"></i>
