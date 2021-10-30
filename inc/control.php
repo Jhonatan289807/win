@@ -468,5 +468,37 @@ switch($op){
         }
         break;
     }
+    case 29:{//mostrar tecnico
+        try {
+            $obj = new tblUser();
+            $data = $obj->mostrar_tecnico();
+            $json = [];
+            foreach($data as $tec){
+                $json[] = jsonSelectTec($tec);
+            }
+            echo json_encode($json);
+        } catch (\Throwable $th) {
+            echo json_encode(array("error"=>"error al traer tecnicos"),JSON_FORCE_OBJECT);
+        }
+        break;
+    }
+    case 30:{
+        try {
+            $data = json_decode($_POST['equipos']);
+            if($data[1] == 1 || $data[1]==2){
+                $obj = new tblEntregaOntMesh();
+                $response = $obj->show($data[0]);
+                $json = [];
+                foreach($response as $equipos){
+                    $json[] = jsonEquiposOntMesh($equipos);
+                }
+                echo json_encode($json);
+            }else{
+
+            }
+        } catch (\Throwable $th) {
+            echo json_encode(array("error"=>"error al traer equipos"),JSON_FORCE_OBJECT);
+        }
+        break;
+    }
 }
-?>
