@@ -123,7 +123,6 @@ if (isset($_SESSION['user'])) {
                     </main>
                 </div>
             </div>
-
             <script src="../dist/js/jquery-3.6.0.js"></script>
             <script src="../dist/js/bootstrap.min.js"></script>
             <script src="../dist/datatable/datatables.js"></script>

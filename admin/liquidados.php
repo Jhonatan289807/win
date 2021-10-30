@@ -156,6 +156,7 @@ if (isset($_SESSION['user'])) {
                         </div>
                     </main>
                 </div>
+
             </div>
             <script src="../dist/js/jquery-3.6.0.js"></script>
             <script src="../dist/js/bootstrap.min.js"></script>
@@ -165,7 +166,6 @@ if (isset($_SESSION['user'])) {
             <script src="../js/nav.js"></script>
             <script src="../js/abonados.js"></script>
         </body>
-
         </html>
 <?php
     } else {

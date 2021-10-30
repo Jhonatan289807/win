@@ -27,6 +27,20 @@ class tblUser{
         $this->disconnect();
         return $array;
     }
+    public function mostrar_tecnico(){
+        $con = $this->connect();
+        $ps = $con->prepare("SELECT id ,user FROM tbl_user WHERE type_user = 2");
+        $ps->execute();
+        $array = array();
+        while ($data = $ps->fetch(PDO::FETCH_ASSOC)){
+            $obj = new user();
+            $obj->setId($data["id"]);
+            $obj->setUser($data["user"]);
+            array_push($array,$obj);
+        }
+        $this->disconnect();
+        return $array;
+    }
     public function add_user($user){
         $con = $this->connect();
         $ps = $con->prepare("INSERT INTO tbl_user (user_cod,user_pass,user_phone,type_user) VALUES (?,?,?,?)");
