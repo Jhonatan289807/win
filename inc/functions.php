@@ -1,0 +1,17 @@
+<?php
+require_once("config.php");
+require_once("conexion.php");
+require_once("../model/user.php");
+require_once("../model/pedidos.php");
+require_once("../model/detalles.php");
+require_once("../model/ontmesh.php");
+require_once("../model/productos.php");
+require_once("../model/entregados.php");
+//tablas
+require_once("tbl_user.php");
+require_once("tbl_pedido.php");
+require_once("tbl_ped_detalle.php");
+require_once("tbl_ont_mesh.php");
+require_once("agregarped.php");
+require_once("tbl_prod.php");
+?>

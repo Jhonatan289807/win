@@ -1,0 +1,134 @@
+html,
+body {
+    height: 100%;
+    background-color: #e9e9e9ee;
+} 
+.index {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-abstracto-neutro-negro-oscuro-diseno-presentacion_181182-592.jpg?size=626&ext=jpg');
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    color: white;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+
+/* Dashboard */
+.sidebar{
+    border-right: 1px solid #d6d6d6;
+}
+.sidebar li {
+    padding: 10px;
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+    .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.acc_insu .row{
+    gap: 15px;
+}
+.ajs-success{
+    background-color: #34b61a !important;
+    color:#ffff;
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+}
+#contenedor_carga{
+    position: fixed;
+    z-index: 1040;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(182, 182, 182, 0.9);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#carga{
+    border:15px solid #ccc;
+    border-top-color: rgb(243, 86, 24);
+    border-top-style: groove;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+@keyframes girar{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
