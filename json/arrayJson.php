@@ -137,8 +137,8 @@ function jsonOtrosEntregados($obj){
             'cant' => $obj->getCantidad(),
             'fecha_ent' => $obj->getFechaentrega()
         );
-    } catch (\Throwable $th) {
-        //throw $th;
+    } catch (Exception $e) {
+        return array('ocurrio un error en el json');
     }
 }
 function jsonSelectProd($obj){
@@ -147,8 +147,34 @@ function jsonSelectProd($obj){
             'id' => $obj->getIdprod(),
             'prod' => $obj->getProd()
         );
-    } catch (\Throwable $th) {
-        //throw $th;
+    } catch (Exception $e) {
+        return array('ocurrio un error en el json');
+    }
+}
+function jsonSelectTec($obj){
+    try {
+        return array(
+            'id' => $obj->getId(),
+            'user' => $obj->getUser()
+        );
+    } catch (Exception $e) {
+        return array('ocurrio un error en el json');
+    }
+}
+function jsonEquiposOntMesh($obj){
+    try {
+        return array(
+            'prod' => $obj->getProd(),
+            'modelo' => $obj->getModelo(),
+            'serie01' => $obj->getSerie01(),
+            'serie02' => $obj->getSerie02(),
+            'fecha_entrega' => $obj->getFechaentrega(),
+            'id_estado' => $obj->getIdestado(),
+            'estado' => $obj->getEstado(),
+            'fecha_liquido' => $obj->getFechaliquido()
+        );
+    } catch (Exception $e) {
+        return array('ocurrio un error en el json');
     }
 }
 ?>

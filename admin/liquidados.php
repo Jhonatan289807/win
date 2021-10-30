@@ -93,7 +93,7 @@
     <script src="../dist/fontawesome/js/all.min.js"></script>
     <script src="../js/idioma.js"></script>
     <script src="../js/nav.js"></script>
-    <script src="../js/abonados.js"></script>
+    <script src="../js/liquidados.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,10 @@ class Entregados{
     private $serie02;
     private $fechaentrega;
     private $cantidad;
+    private $fechaliquido;
+    private $estado;
+    private $idestado;
+
 
     public function getId()
     {
@@ -69,6 +73,33 @@ class Entregados{
     public function setCantidad($cantidad)
     {
         $this->cantidad = $cantidad;
+        return $this;
+    }
+    public function getFechaliquido()
+    {
+        return $this->fechaliquido;
+    }
+    public function setFechaliquido($fechaliquido)
+    {
+        $this->fechaliquido = $fechaliquido;
+        return $this;
+    }
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+        return $this;
+    }
+    public function getIdestado()
+    {
+        return $this->idestado;
+    }
+    public function setIdestado($idestado)
+    {
+        $this->idestado = $idestado;
         return $this;
     }
 }

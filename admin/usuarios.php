@@ -90,7 +90,6 @@ if(isset($_SESSION['user'])){
     <script src="../dist/datatable/datatables.js"></script>
     <script src="../dist/fontawesome/js/all.min.js"></script>
     <script src="../js/idioma.js"></script>
-    <!-- <script src="../js/admin.js"></script> -->
 </body>
 
 </html>
