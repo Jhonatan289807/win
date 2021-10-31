@@ -114,7 +114,7 @@ if (isset($_SESSION['user'])) {
                         </div>
                     </div>
                 </div> <br>
-                <div class="table-responsive contenedor-tablaped">
+                <div class="table-responsive cont-tabla-user p-3">
                     <table class="table table-sm text-center" id="tabla-usuarios">
                         <thead class="bg-dark text-white">
                             <tr>

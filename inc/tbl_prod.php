@@ -97,9 +97,14 @@ class TablaProducto{
             $con = $this->connect();
             $ps = $con->prepare("SELECT id FROM tbl_prod");
             $ps->execute();
-            $data = $ps->fetch(PDO::FETCH_ASSOC);
+            $array = [];
+            while($data = $ps->fetch(PDO::FETCH_ASSOC)){
+                $array[] = [
+                    'id' => $data['id']
+                ];
+            }
             $this->disconnect();
-            return $data;
+            return $array;
         } catch (Exception $e) {
             var_dump($e);
         }

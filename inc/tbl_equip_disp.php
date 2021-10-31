@@ -17,7 +17,6 @@ class TablaEquiposDisponibles{
             $ps->bindValue(2,$user,PDO::PARAM_INT);
             $ps->bindValue(3,0,PDO::PARAM_INT);
             $ps->execute();
-            $this->disconnect();
         } catch (Exception $e){
             var_dump($e);
         }

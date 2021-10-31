@@ -10,18 +10,16 @@ class tblUser{
         $obj = new Conexion();
         return $obj->disconnected();
     }
-    public function show_tbl(){
+    public function show_users(){
         $con = $this->connect();
-        $ps = $con->prepare("SELECT * FROM tbl_user");
+        $ps = $con->prepare("SELECT user,user_cod,user_phone FROM tbl_user WHERE type_user=2");
         $ps->execute();
         $array = array();
         while ($data = $ps->fetch(PDO::FETCH_ASSOC)){
             $obj = new user();
-            $obj->setId($data["id"]);
             $obj->setUser($data["user"]);
-            $obj->setUserpass($data["user_pass"]);
+            $obj->setUsercod($data['user_cod']);
             $obj->setUserphone($data["user_phone"]);
-            $obj->setTypeuser($data["type_user"]);
             array_push($array,$obj);
         }
         $this->disconnect();
@@ -46,13 +44,12 @@ class tblUser{
             $con = $this->connect();
             $ps = $con->prepare("INSERT INTO tbl_user (user,user_cod,user_pass,user_phone,type_user) VALUES (?,?,?,?,?)");
             $ps->bindValue(1,$user['user']);
-            $ps->bindValue(2,"U00".$cod);
+            $ps->bindValue(2,$cod);
             $ps->bindValue(3,password_hash($user['pass'] , PASSWORD_DEFAULT, ['cost' => 10]));
             $ps->bindValue(4,$user['cel'],PDO::PARAM_INT);
-            $ps->bindValue(5,1);
+            $ps->bindValue(5,2);
             $ps->execute();
-            return "U00".$cod;
-        $this->disconnect();
+            $this->disconnect();
         } catch (Exception $th) {
             var_dump($th);
         }
