@@ -110,7 +110,7 @@ if (isset($_SESSION['user'])) {
                                             </div>
                                             <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
                                                 <label for="">Tecnico</label>
-                                                <select class="form-control slt-equipo" id="slt-tecnico"></select>
+                                                <select class="form-control slt-equipo" id="slt-user"></select>
                                             </div>
                                             <div class="col-12 col-sm-12 col-lg-4 col-xl-4 div-btn">
                                                 <button type="submit" class="btn btn-success btn-filtrarcon">Filtrar</button>

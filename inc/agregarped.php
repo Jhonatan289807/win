@@ -16,11 +16,9 @@ class AgregarPedidos{
             $con = $this->connect();
             foreach($equipo as $ped){
                 if($ped['tipo'] != 1 && $ped['tipo'] != 2){
-                    $ps = $con->prepare("INSERT INTO tbl_entrega_otros (id_det_fk,fecha_entrega,cant_liquido,fecha_liquido) VALUES (?,?,?,?)");
+                    $ps = $con->prepare("INSERT INTO tbl_entrega_otros (id_det_fk,fecha_entrega) VALUES (?,?)");
                     $ps->bindValue(1,$ped['iddet'],PDO::PARAM_INT);
                     $ps->bindValue(2,$fecha);
-                    $ps->bindValue(3,0,PDO::PARAM_INT);
-                    $ps->bindValue(4,'0-0-0');
                     $ps->execute();
                 }
             } 

@@ -494,11 +494,19 @@ switch($op){
                 }
                 echo json_encode($json);
             }else{
-
             }
         } catch (\Throwable $th) {
             echo json_encode(array("error"=>"error al traer equipos"),JSON_FORCE_OBJECT);
         }
         break;
+    }
+    case 31:{
+        $data = $_POST['data'];
+        $obj = new tblUser();
+        $codold = $obj->getCod();
+        $codnew = $codold+1;
+        $codigo = $obj->add_user($data,$codold);
+        $obj->updateCod($codnew,$codold);
+        $id = $obj->getIdUser($codigo);
     }
 }
