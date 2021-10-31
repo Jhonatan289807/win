@@ -177,4 +177,15 @@ function jsonEquiposOntMesh($obj){
         return array('ocurrio un error en el json');
     }
 }
+function jsonUsersAdmin($obj){
+    try {
+        return array(
+            'user' => $obj->getUser(),
+            'cod'  => $obj->getUsercod(),
+            'cel'  => $obj->getUserphone()
+        );
+    } catch (Exception $e) {
+        return array('ocurrio un error en el json');
+    }
+}
 ?>

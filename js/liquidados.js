@@ -37,7 +37,7 @@ function mostrarTecnico(){
         data:{'op':29},
         dataType:'JSON',
         success:function(data){
-            let slt = document.getElementById("slt-tecnico");
+            let slt = document.getElementById("slt-user");
             let options = "<option value='0'>Seleccione un técnico</option>"
             $.each(data,function(){
                 options+="<option value='"+this['id']+"'>"+this['user']+"</option>";
@@ -46,11 +46,16 @@ function mostrarTecnico(){
         }
     });
 }
-$('.btn-filtrar').click(function(e){
-    let user = $('.slt-user').val();
-    let tipo = $('.slt-tipo').val();
-    let json = JSON.stringify([2,1]);
-    FiltrarEquipos(json);
+$('.btn-filtrarcon').click(function(e){
+    let user = $('#slt-user').val();
+    let tipo = $('#slt-tipo').val();
+    if(user != 0 && tipo != 0){
+        e.preventDefault();
+        let json = JSON.stringify([user,tipo]);
+        FiltrarEquipos(json);
+    }else{
+        e.preventDefault();
+    }
 });
 
 function FiltrarEquipos(equipos){

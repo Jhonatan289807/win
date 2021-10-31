@@ -494,10 +494,60 @@ switch($op){
                 }
                 echo json_encode($json);
             }else{
-
             }
         } catch (\Throwable $th) {
             echo json_encode(array("error"=>"error al traer equipos"),JSON_FORCE_OBJECT);
+        }
+        break;
+    }
+    case 31:{
+        try {
+            $data = $_POST['data'];
+            $obj = new tblUser();
+            $codold = $obj->getCod();
+            if($codold < 10){
+                $coduser = "U000".$codold;
+            }else if($codold >= 10 && $codold <100){
+                $coduser = "U00".$codold;
+            }else if($codold >=100 && $codold <1000){
+                $coduser = "U0".$codold;
+            }
+            $codnew = $codold+1;
+            //agregamos nuevo usuario
+            $obj->add_user($data,$coduser);
+            //actualizamos el codigo
+            $obj->updateCod($codnew,$codold);
+            //buscamos el id del usuario por su codigo
+            $iduser = $obj->getIdUser($coduser);
+            $objprod = new TablaProducto();
+            //obtenemos los id de los productos
+            $idprod = $objprod->getId();
+            $disp = new TablaEquiposDisponibles();
+            //recorremos los id de los productos y registramos en la tabla de disp
+            foreach($idprod as $prod){
+                $disp->insertEquipoUser($iduser,$prod['id']);
+            }
+            echo json_encode(true);
+        } catch (Exception $e){
+            var_dump($e);
+        }
+        break;
+    }
+    case 32:{
+        try {
+            $obj = new tblUser();
+            $data = $obj->show_users();
+            $json = [];
+            foreach($data as $user){
+                $json[] = jsonUsersAdmin($user);
+            }
+            if($json){
+                echo json_encode($json);
+            }else{
+                echo json_encode(['error'=>'no existen usuarios']);
+            }
+        } catch (\Throwable $th) {
+            echo json_encode(array("error"=>"error al llamar a usuarios"),JSON_FORCE_OBJECT);
         }
         break;
     }
