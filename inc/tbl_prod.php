@@ -92,5 +92,17 @@ class TablaProducto{
             echo $e;
         }
     }
+    public function getId(){
+        try {
+            $con = $this->connect();
+            $ps = $con->prepare("SELECT id FROM tbl_prod");
+            $ps->execute();
+            $data = $ps->fetch(PDO::FETCH_ASSOC);
+            $this->disconnect();
+            return $data;
+        } catch (Exception $e) {
+            var_dump($e);
+        }
+    }
 }
 ?>

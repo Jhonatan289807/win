@@ -72,6 +72,7 @@ class tblUser{
         $ps->bindParam(1,$user,PDO::PARAM_INT);
         $ps->execute();
         $response = $ps->fetch(PDO::FETCH_ASSOC);
+        $this->disconnect();
         if($response){
             return true;
         }else{
@@ -85,6 +86,7 @@ class tblUser{
             $ps->bindParam(1,$user[0],PDO::PARAM_INT);
             $ps->execute();
             $response = $ps->fetch(PDO::FETCH_ASSOC);
+            $this->disconnect();
             if(password_verify($user[1] , $response['user_pass'])){
                 return true;
             }else{
@@ -100,6 +102,7 @@ class tblUser{
         $ps->bindParam(1,$user,PDO::PARAM_INT);
         $ps->execute();
         $data = $ps->fetch(PDO::FETCH_ASSOC);
+        $this->disconnect();
         if($data != 0 or $data != ""){
             $obj = new user();
             $obj->setId($data["id"]);
@@ -116,6 +119,7 @@ class tblUser{
         $ps = $con->prepare("SELECT cod FROM cod_user");
         $ps->execute();
         $cod = $ps->fetch(PDO::FETCH_ASSOC);
+        $this->disconnect();
         return $cod['cod'];
     }
     public function updateCod($codnew,$codold){
@@ -125,6 +129,7 @@ class tblUser{
             $ps->bindValue(1,$codnew,PDO::PARAM_INT);
             $ps->bindValue(2,$codold,PDO::PARAM_INT);
             $ps->execute();
+            $this->disconnect();
         } catch (Exception $e){
             var_dump($e);
         }
@@ -136,7 +141,8 @@ class tblUser{
             $ps->bindValue(1,$cod);
             $ps->execute();
             $id = $ps->fetch(PDO::FETCH_ASSOC);
-            return $id;
+            $this->disconnect();
+            return $id['id'];
         } catch (Exception $e){
             var_dump($e);
         }

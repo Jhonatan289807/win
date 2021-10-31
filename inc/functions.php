@@ -15,4 +15,5 @@ require_once("tbl_ont_mesh.php");
 require_once("agregarped.php");
 require_once("tbl_prod.php");
 require_once("tbl_entrega_ontmesh.php");
+require_once("tbl_equip_disp.php");
 ?>

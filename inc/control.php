@@ -501,12 +501,23 @@ switch($op){
         break;
     }
     case 31:{
-        $data = $_POST['data'];
-        $obj = new tblUser();
-        $codold = $obj->getCod();
-        $codnew = $codold+1;
-        $codigo = $obj->add_user($data,$codold);
-        $obj->updateCod($codnew,$codold);
-        $id = $obj->getIdUser($codigo);
+        try {
+            $data = $_POST['data'];
+            $obj = new tblUser();
+            $codold = $obj->getCod();
+            $codnew = $codold+1;
+            $codigo = $obj->add_user($data,$codold);
+            $obj->updateCod($codnew,$codold);
+            $iduser = $obj->getIdUser($codigo);
+            $objprod = new TablaProducto();
+            $idprod = $objprod->getId();
+            $disp = new TablaEquiposDisponibles();
+            foreach($idprod as $prod){
+                $disp->insertEquipoUser($iduser,$prod['id']);
+            }
+            return true;
+        } catch (Exception $e){
+            var_dump($e);
+        }
     }
 }
