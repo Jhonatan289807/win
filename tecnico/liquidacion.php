@@ -17,7 +17,7 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" href="../css/estilo.css">
             <link rel="stylesheet" href="../css/tecnico.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-            <title>Técnico</title>
+            <title>Liquidacion</title>
         </head>
 
         <body>
@@ -41,67 +41,61 @@ if (isset($_SESSION['user'])) {
                         <div class="sidebar-sticky pt-3">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">
+                                    <a class="nav-link" href="home_tecnico.php">
                                         <i class="fas fa-house-user"></i>
                                         Pedido
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="liquidacion.php">
+                                    <a class="nav-link active" href="#">
                                         <i class="fas fa-download"></i>
                                         Liquidacion
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="cambiar_contra.php">
-                                    <i class="fas fa-key"></i>>
+                                    <i class="fas fa-key"></i>
                                         Cambiar Contraseña
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </nav>
                     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
                         <div class="contenedor-ped mb-4 mt-4 p-3">
-                            <h4>Realizar pedido</h4>
+                            <h4>Filtrar producto</h4>
                             <form class="form-ped p-3 mt-3">
                                 <div class="row">
-                                    <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
+                                    <div class="col-6 col-sm-6 col-lg-4 col-xl-6">
                                         <label>Tipo de equipo</label>
                                         <select class="form-control slt-equipo" id="slt-equip"></select>
                                     </div>
-                                    <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
-                                        <label for="">Cantidad</label>
-                                        <input type="number" class="form-control txt-cant" required>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-4 col-xl-4 div-btn">
-                                        <button type="submit" class="btn btn-success btn-agregar">Agregar</button>
+                                    <div class="col-6 col-sm-12 col-lg-4 col-xl-6 div-btn">
+                                        <button type="submit" class="btn btn-success btn-filtrar">Filtrar Producto</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
+                        
                         <div class="contenedor-title mb-4 mt-4 p-3">
                             <div class="row">
-                                <div class="col-6">
-                                    <h4>Total de agregados: <span class="span-cant">0</span></h4>
+                                <div class="col-12 text-center">
+                                    <h4>Liquidacion</h4><br>
                                 </div>
-                                <div class="col-6 cont-enviar"><button class="btn btn-warning btn-enviar">Enviar pedido</button>
+                                <div class="col-4 mt-2 text-center">
+                                    <h5><span class="span-podruc">Fibra Optica</span> | Cantidad Disponible: <span class="span-cant">0</span></h5>
+                                </div>
+                                <div class="col-4">
+                                    <input class="form-control" type="text" placeholder="Cantidad Liquidada">
+                                </div>
+
+                                <div class="col-4">
+                                    <input class="btn btn-info btn-block" type="submit" value="Liquidar" placeholder="Cantidad Liquidada">
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive table-ped p-3 mb-4">
-                            <table class="table table-striped table-sm  text-center" id="tbl-ped">
-                                <thead>
-                                    <tr>
-                                        <th>N°</th>
-                                        <th>Descripción</th>
-                                        <th>Cantidad</th>
-                                        <th>Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                        </div>
+
                     </main>
                 </div>
             </div>
