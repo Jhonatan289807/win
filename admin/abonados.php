@@ -105,7 +105,7 @@ if (isset($_SESSION['user'])) {
                                 </div>
                             </div>
                         </div> <br>
-                        <div class="table-responsive contenedor-tablaped mt-3 p-3">
+                        <div class="table-responsive contenedor-tablaped mt-1 p-3">
                             <table class="table table-sm text-center" id="tabla-pedido">
                                 <thead class="bg-dark text-white">
                                     <tr>

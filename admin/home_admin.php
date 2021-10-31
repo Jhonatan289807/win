@@ -106,7 +106,7 @@ if (isset($_SESSION['user'])) {
                                 </div>
                             </div>
                         </div> <br>
-                        <div class="table-responsive contenedor-tablaped p-3 mt-3">
+                        <div class="table-responsive contenedor-tablaped p-3 mt-1">
                             <table class="table table-sm text-center" id="tabla-pedido">
                                 <thead class="bg-dark text-white">
                                     <tr>
@@ -120,7 +120,7 @@ if (isset($_SESSION['user'])) {
                                 </thead>
                             </table>
                         </div>
-                        <div class="titulo-detalles pr-3 pl-3 pt-1 pb-2 mt-3">
+                        <div class="titulo-detalles pr-3 pl-3 pt-1 pb-2 mt-2">
                             <div class="mb-4">
                                 <h3 class="titulo-ped-det">
                                     <a hrf="#" class="mostrar-ped">

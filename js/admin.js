@@ -104,6 +104,7 @@ $(document).on('click','.btn-detalles',function(){
     $('.span-fecha').html(fecha);
     vaciarCarro();
     $('.contenedor-tablaped').hide();
+    $('.info-titu').hide();
     $('.titulo-detalles').css("visibility", "visible");
     $('.cont-detalles').show();
     $('.mostrar-ped').show();
@@ -218,6 +219,7 @@ function mostrarPed(){
     $('.cont-detalles').hide();
     $('.titulo-detalles').css('visibility','hidden');
     $('.contenedor-tablaped').show();
+    $('.info-titu').show();
     $('.mostrar-ped').hide()
     pedidos();
 }
