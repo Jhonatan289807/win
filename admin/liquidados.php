@@ -14,7 +14,8 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" href="../dist/datatable/datatables.min.css">
             <link rel="stylesheet" href="../dist/fontawesome/css/all.min.css">
             <link rel="stylesheet" href="../css/estilo.css">
-            <link rel="stylesheet" href="../css/admin.css"><!-- 
+            <link rel="stylesheet" href="../css/admin.css">
+            <!-- 
             <link rel="stylesheet" href="../css/tecnico.css"> -->
             <title>Liquidados</title>
         </head>
@@ -137,22 +138,47 @@ if (isset($_SESSION['user'])) {
                             </div>
                         </div>
                         <div class="info-titu p-3 mt-3">
-                        <div class="table-responsive table-ped p-3 mb-4">
-                            <table class="table table-striped table-sm  text-center" id="tbl-ped">
-                                <thead>
-                                    <tr>
-                                        <th>N°</th>
-                                        <th>Producto</th>
-                                        <th>Modelo</th>
-                                        <th>Serie 1</th>
-                                        <th>Serie 2</th>
-                                        <th>Fecha de Entrega</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
+                            <div class="table-responsive table-ped p-3 mb-4">
+                                <table class="table table-striped table-sm  text-center" id="tbl-ped">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Producto</th>
+                                            <th>Modelo</th>
+                                            <th>Serie 1</th>
+                                            <th>Serie 2</th>
+                                            <th>Fecha de Entrega</th>
+                                            <th>Fecha Liquidada</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
                         </div>
+
+                        <div class="info-titu p-3 mt-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5><span class="span-podruc">Fibra Optica</span> | Cantidad Disponible: <span class="span-cant">0</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-titu p-3 mt-3">
+                            <div class="table-responsive table-ped p-3 mb-4">
+                                <table class="table table-striped table-sm  text-center" id="tbl-ped">
+                                    <thead>
+                                        <tr>
+                                            <th>N°</th>
+                                            <th>Producto</th>
+                                            <th>Fecha Liquidada</th>
+                                            <th>Cantidad Liquidada</th>
+                                            <th>Cantidad Restante</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
                         </div>
                     </main>
                 </div>
@@ -166,6 +192,7 @@ if (isset($_SESSION['user'])) {
             <script src="../js/nav.js"></script>
             <script src="../js/liquidados.js"></script>
         </body>
+
         </html>
 <?php
     } else {
