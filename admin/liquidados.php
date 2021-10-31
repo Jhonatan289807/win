@@ -16,7 +16,7 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" href="../css/estilo.css">
             <link rel="stylesheet" href="../css/admin.css"><!-- 
             <link rel="stylesheet" href="../css/tecnico.css"> -->
-            <title>Document</title>
+            <title>Liquidados</title>
         </head>
 
         <body>
@@ -106,11 +106,11 @@ if (isset($_SESSION['user'])) {
                                         <div class="row">
                                             <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
                                                 <label>Tipo de equipo</label>
-                                                <select class="form-control slt-equipo" id="slt-equip"></select>
+                                                <select class="form-control slt-equipo" id="slt-tipo"></select>
                                             </div>
                                             <div class="col-6 col-sm-6 col-lg-4 col-xl-4">
                                                 <label for="">Tecnico</label>
-                                                <select class="form-control slt-equipo" id="slt-equip"></select>
+                                                <select class="form-control slt-equipo" id="slt-tecnico"></select>
                                             </div>
                                             <div class="col-12 col-sm-12 col-lg-4 col-xl-4 div-btn">
                                                 <button type="submit" class="btn btn-success btn-filtrarcon">Filtrar</button>
@@ -164,7 +164,7 @@ if (isset($_SESSION['user'])) {
             <script src="../dist/fontawesome/js/all.min.js"></script>
             <script src="../js/idioma.js"></script>
             <script src="../js/nav.js"></script>
-            <script src="../js/abonados.js"></script>
+            <script src="../js/liquidados.js"></script>
         </body>
         </html>
 <?php
