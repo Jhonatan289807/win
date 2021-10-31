@@ -16,7 +16,7 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" href="../dist/fontawesome/css/all.min.css">
             <link rel="stylesheet" href="../css/estilo.css">
             <link rel="stylesheet" href="../css/admin.css">
-            <title>Pedidos Realizados</title>
+            <title>Usuarios</title>
         </head>
 
         <body>
