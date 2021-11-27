@@ -189,15 +189,15 @@ if (isset($_SESSION['user'])) {
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nueva contraseña</label>
                             <input type="password" class="form-control" id="txt-new-pass"
-                                aria-describedby="emailHelp" placeholder="Ingrese nueva contraseña">
+                                aria-describedby="emailHelp" placeholder="Ingrese nueva contraseña" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Repita contraseña</label>
                             <input type="password" class="form-control" id="txt-repit-pass"
-                                aria-describedby="emailHelp" placeholder="Repita la contraseña">
+                                aria-describedby="emailHelp" placeholder="Repita la contraseña" required>
                         </div>
+                        <span class="span-aviso text-center">Las contraseñas no coinciden</span>
                         <div class="form-group text-center">
-                            <small class="error-pass">Las contraseñas no coinciden</small>
                             <button type="submit" class="btn btn-success btn-new-pass w-100">Cambiar contraseña</button>
                         </div>
                     </form>
@@ -211,7 +211,6 @@ if (isset($_SESSION['user'])) {
     <script src="../dist/js/jquery-3.6.0.js"></script>
     <script src="../dist/js/bootstrap.min.js"></script>
     <script src="../dist/datatable/datatables.js"></script>
-    <script src="../dist/fontawesome/js/all.min.js"></script>
     <script src="../dist/alertify/alertify.min.js"></script>
     <script src="../js/idioma.js"></script>
     <script src="../js/nav.js"></script>

@@ -551,4 +551,15 @@ switch($op){
         }
         break;
     }
+    case 33:{
+        try {
+            $pass = $_POST['pass'];
+            $obj = new tblUser();
+            $obj->updatePass($pass,$_SESSION['user']['id']);
+            echo json_encode(true);
+        } catch (\Throwable $th) {
+            echo json_encode(array("error"=>"error al cambiar de contraseña"),JSON_FORCE_OBJECT);
+        }
+        break;
+    }
 }

@@ -144,5 +144,15 @@ class tblUser{
             var_dump($e);
         }
     }
-
+    public function updatePass($pass,$user){
+        try {
+            $con = $this->connect();
+            $ps = $con->prepare("UPDATE tbl_user SET user_pass = ? WHERE id = ?");
+            $ps->bindValue(1,password_hash($pass , PASSWORD_DEFAULT, ['cost' => 10]));
+            $ps->bindValue(2,$user,PDO::PARAM_INT);
+            $ps->execute();
+        } catch (Exception $e){
+            var_dump($e);
+        }
+    }
 }

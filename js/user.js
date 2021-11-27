@@ -31,7 +31,20 @@ $('.btn-new-user').click(function(e){
     }
 });
 $('.btn-new-pass').click(function(e){
-    
+    let newpass = $('#txt-new-pass').val();
+    let repitpass = $('#txt-repit-pass').val();
+    if(newpass && repitpass != ""){
+        e.preventDefault();
+        if(newpass == repitpass){
+            CambiarPass(newpass);
+        }else{
+            $('.span-aviso').css('visibility','visible');
+            $('.span-aviso').fadeIn()
+            setTimeout(function(){
+                $('.span-aviso').fadeOut(1500)
+            },4000);
+        }
+    }
 });
 function AgregarUsuario(data){
     $.ajax({
@@ -62,6 +75,19 @@ function MostrarUsuarios(){
             }
          }
     });
+}
+function CambiarPass(pass){
+    $.ajax({
+        url:'../inc/control.php',
+        method:'POST',
+        data:{'op':33,'pass':pass},
+        dataType:'JSON',
+        success:function(response){
+            $('#modal-edit-pass').modal('toggle');
+            limpiarText();
+            alertify.success("Contraseña actualizada con éxito");
+        }
+    })
 }
 function AgregarTablaUser(data){
     let cont = 1;
