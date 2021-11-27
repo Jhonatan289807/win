@@ -4,7 +4,6 @@ body {
     background-color: #e9e9e9ee;
 } 
 .index {
-    background-image: url('https://img.freepik.com/vector-gratis/fondo-abstracto-neutro-negro-oscuro-diseno-presentacion_181182-592.jpg?size=626&ext=jpg');
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -12,15 +11,26 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    font-family: 'Numans', sans-serif;
-    color: white;
+    font-family: Century Gothic;
+    background: #faf4f4;
 }
 
 .form-signin {
     width: 100%;
     max-width: 330px;
-    padding: 15px;
+    padding: 20px;
     margin: auto;
+    background: #ffff;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    box-shadow: 10px 8px 10px rgb(216, 216, 216);
+}
+.form-signin .fa-users{
+    color: #007bff;
+    margin-bottom: 10px;
+}
+.btnIngresar{
+    font-size: 16px;
 }
 
 .form-signin .checkbox {
@@ -113,7 +123,7 @@ body {
 }
 #carga{
     border:15px solid #ccc;
-    border-top-color: rgb(243, 86, 24);
+    border-top-color: #007bff;
     border-top-style: groove;
     height: 80px;
     width: 80px;

@@ -13,6 +13,7 @@ if (isset($_SESSION['user'])) {
             <link rel="stylesheet" href="../dist/datatable/datatables.min.css">
             <link rel="stylesheet" href="../dist/datatable/datatables.css">
             <link rel="stylesheet" href="../dist/fontawesome/css/all.min.css">
+            <link rel="stylesheet" href="../dist/alertify/css/alertify.min.css">
             <link rel="stylesheet" href="../css/estilo.css">
             <link rel="stylesheet" href="../css/admin.css">
             <title>Usuarios</title>
@@ -104,11 +105,11 @@ if (isset($_SESSION['user'])) {
                             <h3>Usuarios</h3>
                         </div>
                         <div class="col-6 col-md-6 col-sm-6 col-lg-3 cont-nuevoequi">
-                            <button class="btn btn-success btn-new-user w-100 h-100" data-toggle="modal"
+                            <button class="btn btn-success w-100 h-100" data-toggle="modal"
                                 data-target="#modal-new-user">Nuevo usuario</button>
                         </div>
                         <div class="col-6 col-md-6 col-sm-6 col-lg-3 cont-nuevoequi">
-                            <button class="btn btn-success btn-edit-pass w-100 h-100" data-toggle="modal"
+                            <button class="btn btn-success w-100 h-100" data-toggle="modal"
                                 data-target="#modal-edit-pass">Cambiar contraseña</button>
                         </div>
                     </div>
@@ -197,7 +198,7 @@ if (isset($_SESSION['user'])) {
                         </div>
                         <div class="form-group text-center">
                             <small class="error-pass">Las contraseñas no coinciden</small>
-                            <button type="submit" class="btn btn-success w-100">Cambiar contraseña</button>
+                            <button type="submit" class="btn btn-success btn-new-pass w-100">Cambiar contraseña</button>
                         </div>
                     </form>
                 </div>
@@ -211,6 +212,7 @@ if (isset($_SESSION['user'])) {
     <script src="../dist/js/bootstrap.min.js"></script>
     <script src="../dist/datatable/datatables.js"></script>
     <script src="../dist/fontawesome/js/all.min.js"></script>
+    <script src="../dist/alertify/alertify.min.js"></script>
     <script src="../js/idioma.js"></script>
     <script src="../js/nav.js"></script>
     <script src="../js/user.js"></script>

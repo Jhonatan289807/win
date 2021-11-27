@@ -8,11 +8,13 @@
   <title>Kardex</title>
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="dist/fontawesome/css/all.min.css">
 </head>
 <body class="index">
   <!-- Login -->
   <form class="form-signin text-center">
-    <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesion</h1>
+    <i class="fas fa-users fa-5x"></i>
+    <h4 class="mb-3 font-weight-normal">Iniciar Sesión</h4>
     <label class="sr-only">usuario</label>
     <input type="text" id="inputEmail" class="form-control" placeholder="Ingresar usuario" required autofocus autocomplete="off"><br>
     <label class="sr-only">Password</label>

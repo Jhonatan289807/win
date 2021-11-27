@@ -85,7 +85,7 @@ cant_rest INT NOT NULL,
 FOREIGN KEY (id_disp_fk) REFERENCES tbl_equip_disp(id)
 );
 INSERT INTO cod_user(cod) VALUES (2);
-INSERT INTO tbl_user (user,user_cod,user_pass,user_phone,type_user) VALUES ('Administrador','U001','$2y$10$JqCPr7TGC.l5UpgDrqC/8uS52woEDULxX2iugQetlETnseeajgNwe',9999,1);
+INSERT INTO tbl_user (user,user_cod,user_pass,user_phone,type_user) VALUES ('Administrador','U0001','$2y$10$JqCPr7TGC.l5UpgDrqC/8uS52woEDULxX2iugQetlETnseeajgNwe',9999,1);
 INSERT INTO tbl_estado (tipo_estado) VALUES("Pendiente");
 INSERT INTO tbl_estado (tipo_estado) VALUES("Entregado");
 INSERT INTO tbl_estado (tipo_estado) VALUES("Disponible");

@@ -30,6 +30,9 @@ $('.btn-new-user').click(function(e){
         AgregarUsuario(data);
     }
 });
+$('.btn-new-pass').click(function(e){
+    
+});
 function AgregarUsuario(data){
     $.ajax({
         url:'../inc/control.php',
@@ -38,6 +41,7 @@ function AgregarUsuario(data){
         dataType:'JSON',
         success:function(response){
             $('#modal-new-user').modal('hide');
+            alertify.success("Usuario registrado");
             MostrarUsuarios();
         },error:function(error){
             console.log(error);
@@ -74,5 +78,13 @@ function AgregarTablaUser(data){
 }
 function limpiarTablaUser(){
     tablaUser.clear().draw();
+}
+function limpiarText(){
+    $('#txt-name').val("");
+    $('#txt-apell').val("");
+    $('#txt-cell').val("");
+    $('#txt-pass').val("");
+    $('#txt-new-pass').val("");
+    $('#txt-repit-pass').val("");
 }
 MostrarUsuarios();
